@@ -1,0 +1,19 @@
+function sendOTP() {
+    let phone = document.getElementById("phone").value;
+    if (phone.length === 10) {
+        alert("OTP sent to " + phone);
+        document.getElementById("otp-box").classList.remove("hidden");
+    } else {
+        alert("Enter a valid 10-digit mobile number.");
+    }
+}
+
+function verifyOTP() {
+    let otp = document.getElementById("otp").value;
+    if (otp === "1234") { // Mock OTP for testing
+        alert("Login successful!");
+        window.location.href = "home.html"; // Redirect to home page
+    } else {
+        alert("Invalid OTP. Try again.");
+    }
+}
